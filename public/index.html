@@ -56,8 +56,9 @@
                     type="button" role="tab" aria-controls="login" aria-selected="true">Login</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button"
-                    role="tab" aria-controls="register" aria-selected="false">Register</button>
+                <button data-cy="regTab" class="nav-link" id="register-tab" data-bs-toggle="tab"
+                    data-bs-target="#register" type="button" role="tab" aria-controls="register"
+                    aria-selected="false">Register</button>
             </li>
         </ul>
         <div class="tab-content mt-4" id="authTabsContent">
@@ -68,13 +69,13 @@
                 <form id="loginForm">
                     <div class="mb-3">
                         <label for="loginUsername" class="form-label">Username</label>
-                        <input type="text" id="loginUsername" class="form-control" required>
+                        <input data-cy="loginUsername" type="text" id="loginUsername" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label for="loginPassword" class="form-label">Password</label>
-                        <input type="password" id="loginPassword" class="form-control" required>
+                        <input data-cy="loginPassword" type="password" id="loginPassword" class="form-control" required>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                    <button type="submit" data-cy="submitLogin" class="btn btn-primary w-100">Login</button>
                 </form>
             </div>
             <!-- Registreringsflik -->
@@ -84,13 +85,14 @@
                 <form id="registerForm">
                     <div class="mb-3">
                         <label for="registerUsername" class="form-label">Username</label>
-                        <input type="text" id="registerUsername" class="form-control" required>
+                        <input data-cy="regUsername" type="text" id="registerUsername" class="form-control" required>
                     </div>
                     <div class="mb-3">
                         <label for="registerPassword" class="form-label">Password</label>
-                        <input type="password" id="registerPassword" class="form-control" required>
+                        <input data-cy="regPassword" type="password" id="registerPassword" class="form-control"
+                            required>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Register</button>
+                    <button type="submit" data-cy="submitReg" class="btn btn-primary w-100">Register</button>
                 </form>
             </div>
         </div>

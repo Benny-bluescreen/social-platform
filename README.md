@@ -42,3 +42,15 @@ Detta är ett projekt för en social plattform där användare kan registrera si
 För att köra enhetstester, använd följande kommando:
 ```sh
 npm test
+```
+
+### Beskrivning av tester
+
+Testerna är skrivna med Jest och täcker följande funktioner:
+
+- **Registrering av användare:** Testar att nya användare kan registrera sig med giltiga uppgifter och att felmeddelanden visas för ogiltiga uppgifter.
+- **Inloggning:** Verifierar att befintliga användare kan logga in med korrekta uppgifter och att felmeddelanden visas för ogiltiga uppgifter.
+- **Ändring av lösenord:** Säkerställer att användare kan ändra sitt lösenord och att felmeddelanden visas vid ogiltiga försök.
+- **Utloggning:** Testar att användare kan logga ut korrekt.
+
+Testerna körs automatiskt via GitHub Actions vid varje push till repositoryt för att säkerställa kontinuerlig integration och leverans (CI/CD).

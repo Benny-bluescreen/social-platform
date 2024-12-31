@@ -28,7 +28,6 @@ class UserDatabase {
             return user.username;
 
         } catch (error) {
-            console.error('Fel vid hämtning av användare:', error.message); // Logga det exakta felet
             throw new Error('Fel vid hämtning av användare');
         }
     }

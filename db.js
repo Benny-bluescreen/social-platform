@@ -7,9 +7,17 @@ const sequelize = new Sequelize({
     logging: false, // Inaktivera loggning
 });
 
-// Testa anslutningen
+// Testa anslutningen och synkronisera modellerna
 sequelize.authenticate()
-    .then(() => console.log('Database connected.'))
-    .catch((err) => console.error('Error connecting to the database:', err));
+    .then(() => {
+        console.log('Databas ansluten.');
+        return sequelize.sync(); // Synkronisera modellerna
+    })
+    .then(() => {
+        console.log('Modelldb synkroniserad.');
+    })
+    .catch((err) => {
+        console.error('Fel vid anslutning till db:', err);
+    });
 
 module.exports = sequelize;
